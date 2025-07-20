@@ -140,7 +140,6 @@ function App() {
                   <div className="absolute -bottom-1 left-0 w-0 h-px bg-purple-500 transition-all duration-300 group-hover:w-full"></div>
                 </a>
               ))}
-              <button className="bg-gradient-to-r from-purple-600 to-purple-800 hover:from-purple-500 hover:to-purple-700 text-white px-6 py-2 font-mono text-sm transition-all duration-300 transform hover:scale-105 flex items-center space-x-2 border border-purple-500/50">
               <a 
                 href="https://discord.gg/dopa" 
                 target="_blank" 
@@ -438,12 +437,6 @@ function App() {
                 <span>JACK INTO DISCORD</span>
               </a>
               <div className="flex space-x-6">
-            <a 
-              href="https://discord.gg/dopa" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="w-full bg-gradient-to-r from-purple-600 to-purple-800 text-white px-6 py-3 font-mono text-sm flex items-center justify-center space-x-2 border border-purple-500/50"
-            >
                 <Youtube className="w-6 h-6 text-gray-400 hover:text-purple-400 transition-colors cursor-pointer" />
               </div>
             </div>
@@ -456,7 +449,7 @@ function App() {
                   電脳 • WHERE GHOSTS ARE BORN
                 </div>
               </div>
-            </a>
+            </div>
           </div>
         </div>
       </footer>
