@@ -119,7 +119,7 @@ function App() {
                 <div className="absolute -top-1 -right-1 w-2 h-2 bg-purple-500 rounded-full animate-pulse"></div>
               </div>
               <div className="hidden md:flex flex-col">
-                <div className="text-xs font-mono text-purple-400">NEURAL.NET</div>
+                <div className="text-xs font-mono text-purple-400">DOPA</div>
                 <div className="text-xs font-mono text-gray-500">{currentTime.toLocaleTimeString()}</div>
               </div>
             </div>
@@ -208,7 +208,7 @@ function App() {
 
             {/* Subtitle */}
             <p className="text-lg md:text-xl text-gray-400 font-mono mb-12 max-w-2xl mx-auto">
-              NEURAL NETWORK // DISCORD SERVER // CYBERPUNK COMMUNITY
+              DOPA // DISCORD SERVER // DISCORD COMMUNITY
             </p>
 
             {/* CTA Buttons */}
@@ -263,7 +263,7 @@ function App() {
                 SYSTEM MODULES
               </div>
               <h2 className="text-5xl md:text-7xl font-mono font-black text-white mb-4">
-                NEURAL.NET
+                DOPA
               </h2>
             </div>
             <p className="text-xl text-gray-400 font-mono max-w-2xl mx-auto">
