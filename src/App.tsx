@@ -118,6 +118,10 @@ function App() {
                 />
                 <div className="absolute -top-1 -right-1 w-2 h-2 bg-purple-500 rounded-full animate-pulse"></div>
               </div>
+              <div className="hidden md:block">
+                <div className="text-xl font-mono font-bold text-white tracking-wider">DOPA</div>
+                <div className="text-xs font-mono text-purple-400">NEURAL NETWORK</div>
+              </div>
               <div className="hidden md:flex flex-col">
                 <div className="text-xs font-mono text-purple-400">DOPA</div>
                 <div className="text-xs font-mono text-gray-500">{currentTime.toLocaleTimeString()}</div>
@@ -137,9 +141,15 @@ function App() {
                 </a>
               ))}
               <button className="bg-gradient-to-r from-purple-600 to-purple-800 hover:from-purple-500 hover:to-purple-700 text-white px-6 py-2 font-mono text-sm transition-all duration-300 transform hover:scale-105 flex items-center space-x-2 border border-purple-500/50">
+              <a 
+                href="https://discord.gg/dopa" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="bg-gradient-to-r from-purple-600 to-purple-800 hover:from-purple-500 hover:to-purple-700 text-white px-6 py-2 font-mono text-sm transition-all duration-300 transform hover:scale-105 flex items-center space-x-2 border border-purple-500/50"
+              >
                 <Discord className="w-4 h-4" />
                 <span>JACK IN</span>
-              </button>
+              </a>
             </div>
 
             {/* Mobile menu button */}
@@ -418,25 +428,35 @@ function App() {
               Neural network where cyberpunk meets community, code meets consciousness, and legends are compiled.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-8 mb-12">
-              <button className="bg-gradient-to-r from-purple-600 to-purple-800 hover:from-purple-500 hover:to-purple-700 text-white px-8 py-4 font-mono font-bold transition-all duration-300 transform hover:scale-105 flex items-center space-x-3 border border-purple-500/50">
+              <a 
+                href="https://discord.gg/dopa" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="bg-gradient-to-r from-purple-600 to-purple-800 hover:from-purple-500 hover:to-purple-700 text-white px-8 py-4 font-mono font-bold transition-all duration-300 transform hover:scale-105 flex items-center space-x-3 border border-purple-500/50"
+              >
                 <Discord className="w-5 h-5" />
                 <span>JACK INTO DISCORD</span>
-              </button>
+              </a>
               <div className="flex space-x-6">
-                <Twitch className="w-6 h-6 text-gray-400 hover:text-purple-400 transition-colors cursor-pointer" />
+            <a 
+              href="https://discord.gg/dopa" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="w-full bg-gradient-to-r from-purple-600 to-purple-800 text-white px-6 py-3 font-mono text-sm flex items-center justify-center space-x-2 border border-purple-500/50"
+            >
                 <Youtube className="w-6 h-6 text-gray-400 hover:text-purple-400 transition-colors cursor-pointer" />
               </div>
             </div>
             <div className="border-t border-purple-500/30 pt-8">
               <div className="flex flex-col md:flex-row items-center justify-between">
                 <div className="text-gray-500 text-sm font-mono mb-4 md:mb-0">
-                  © 2025 <img src="https://ik.imagekit.io/1yqrowr2y/DOPANEWLOGOV3_1.png?updatedAt=1752931523608" alt="DOPA" className="inline h-4 w-auto filter brightness-75" /> NEURAL NETWORK. ALL RIGHTS RESERVED.
+                  © 2025 DOPA NEURAL NETWORK. ALL RIGHTS RESERVED.
                 </div>
                 <div className="text-gray-500 text-sm font-mono">
                   電脳 • WHERE GHOSTS ARE BORN
                 </div>
               </div>
-            </div>
+            </a>
           </div>
         </div>
       </footer>
