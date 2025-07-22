@@ -1,7 +1,10 @@
 import React, { useState, useEffect } from 'react';
+import { Routes, Route } from 'react-router-dom';
 import { Menu, X, MessageCircle, Users, Zap, Star, Play, ArrowRight, Disc as Discord, Twitch, Youtube, Terminal, Cpu, Wifi, Signal } from 'lucide-react';
+import Team from './components/Team';
+import Leaderboard from './components/Leaderboard';
 
-function App() {
+function HomePage() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [glitchText, setGlitchText] = useState('ENTER THE MATRIX');
   const [currentTime, setCurrentTime] = useState(new Date());
@@ -130,13 +133,18 @@ function App() {
 
             {/* Desktop Navigation */}
             <div className="hidden md:flex items-center space-x-8">
-              {['HOME', 'MATRIX', 'EVENTS', 'GHOSTS'].map((item, index) => (
+              {[
+                { name: 'HOME', href: '#home' },
+                { name: 'MATRIX', href: '#matrix' },
+                { name: 'TEAM', href: '/team' },
+                { name: 'LEADERBOARD', href: '/leaderboard' }
+              ].map((item, index) => (
                 <a
-                  key={item}
-                  href={`#${item.toLowerCase()}`}
+                  key={item.name}
+                  href={item.href}
                   className="relative text-white hover:text-purple-400 transition-all duration-300 font-mono text-sm tracking-wider group"
                 >
-                  <span className="text-purple-500 text-xs">0{index + 1}/</span>{item}
+                  <span className="text-purple-500 text-xs">0{index + 1}/</span>{item.name}
                   <div className="absolute -bottom-1 left-0 w-0 h-px bg-purple-500 transition-all duration-300 group-hover:w-full"></div>
                 </a>
               ))}
@@ -165,14 +173,19 @@ function App() {
         {isMenuOpen && (
           <div className="md:hidden bg-black/95 backdrop-blur-xl border-t border-purple-500/30">
             <div className="px-6 py-6 space-y-4">
-              {['HOME', 'MATRIX', 'EVENTS', 'GHOSTS'].map((item, index) => (
+              {[
+                { name: 'HOME', href: '#home' },
+                { name: 'MATRIX', href: '#matrix' },
+                { name: 'TEAM', href: '/team' },
+                { name: 'LEADERBOARD', href: '/leaderboard' }
+              ].map((item, index) => (
                 <a
-                  key={item}
-                  href={`#${item.toLowerCase()}`}
+                  key={item.name}
+                  href={item.href}
                   className="block text-white hover:text-purple-400 transition-colors font-mono text-sm tracking-wider"
                   onClick={() => setIsMenuOpen(false)}
                 >
-                  <span className="text-purple-500 text-xs">0{index + 1}/</span>{item}
+                  <span className="text-purple-500 text-xs">0{index + 1}/</span>{item.name}
                 </a>
               ))}
               <button className="w-full bg-gradient-to-r from-purple-600 to-purple-800 text-white px-6 py-3 font-mono text-sm flex items-center justify-center space-x-2 border border-purple-500/50">
@@ -454,6 +467,16 @@ function App() {
         </div>
       </footer>
     </div>
+  );
+}
+
+function App() {
+  return (
+    <Routes>
+      <Route path="/" element={<HomePage />} />
+      <Route path="/team" element={<Team />} />
+      <Route path="/leaderboard" element={<Leaderboard />} />
+    </Routes>
   );
 }
 
